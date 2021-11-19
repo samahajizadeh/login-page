@@ -17,7 +17,8 @@ const App = () => {
     setIsLogin(false);
     localStorage.removeItem("isLoggedIn");
   };
-  const loginHandler = () => {
+  const loginHandler = (email,pass) => {
+    console.log(email,pass)
     localStorage.setItem("isLoggedIn", 1);
     setIsLogin(true);
   };
