@@ -6,7 +6,7 @@ const MainHeader = (props) => {
   return (
     <div className={classes["main-header"]}>
       <p className={classes["title-header"]}>ATypical page</p>
-      <Navigation isAuthentication={props.isAuthentication} logout={props.logout} />
+      <Navigation  logout={props.logout} />
     </div>
   );
 };
