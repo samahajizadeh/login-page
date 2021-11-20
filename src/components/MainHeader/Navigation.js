@@ -5,15 +5,15 @@ const Navigation = (props) => {
   return (
     <nav className={classes.nav}>
       <ul>
-        <li>
+      {props.isAuthentication &&<li>
           <a href="">User</a>
-        </li>
-        <li>
+        </li>}
+        {props.isAuthentication &&<li>
           <a href="">Admin</a>
-        </li>
-        <li>
-          {props.isAuthentication &&<button  onClick={props.logout}>Logout</button>}
-        </li>
+        </li>}
+        {props.isAuthentication &&<li>
+          <button  onClick={props.logout}>Logout</button>
+        </li>}
       </ul>
     </nav>
   );
