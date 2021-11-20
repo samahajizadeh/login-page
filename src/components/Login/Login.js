@@ -1,4 +1,5 @@
-import React, { useEffect, useReducer, useState } from "react";
+import React, { useContext, useEffect, useReducer, useState } from "react";
+import AuthContext from "../../store/auth-context";
 import Button from "../UI/Button";
 import Card from "../UI/Card";
 import classes from "./Login.module.css";
@@ -79,10 +80,11 @@ const Login = (props) => {
     // setEnteredPassword(event.target.value);
   };
 
+  const auth = useContext(AuthContext)
   const loginHandler = (event) => {
     event.preventDefault();
     // console.log(emailState.value, enteredPassword);
-    props.login(emailState.value, passwordState.value);
+    auth.loginHandler(emailState.value, passwordState.value);
   };
 
   const validateEmailHandler = () => {
